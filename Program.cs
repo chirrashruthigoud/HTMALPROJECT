@@ -10,17 +10,60 @@ namespace HtmlProjectProgram
     {
         public static void Main(string[] args)
         {
-            DictionaryProblem example = new DictionaryProblem();
-            example.DictionaryMethod();
-            //linked list is the liner datastructure
-            //it consist of group of node in sequence
-            //node consist of two parts
-            //data and address
-            //data:-each node of a linked list can store a data.
-            //address:each node of a linkedlist can take a address of the next node(next)
+            LinkedListNode list = new LinkedListNode();
+            Console.WriteLine("select the following");
+            Console.WriteLine("1.Add element to linked list.\n2.Add element in reverse.\n3.Remove First Element\n4.Remove last element" +
+                "\n5.Size of LinkedList \n6.create linkedlist. \n7.Queue adding value. ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            switch (num)
+            {
+                case 1:
+                    list.Add(56);
+                    list.Add(30);
+                    list.Add(70);
+                    list.ToDisplay();
+                    break;
+                case 2:
+                    list.AddInReverseOrder(90);
+                    list.AddInReverseOrder(100);
+                    list.AddInReverseOrder(110);
+                    list.ToDisplay();
 
-            LinkedlistD linkedlistD = new LinkedlistD();
-            linkedlistD.LinkedlistMethod();
+                    break;
+                case 3:
+                    list.AddInReverseOrder(90);
+                    list.AddInReverseOrder(100);
+                    list.AddInReverseOrder(110);
+                    list.Removeatfirst();
+                    list.ToDisplay();
+                    break;
+                case 4:
+                    list.AddInReverseOrder(90);
+                    list.AddInReverseOrder(100);
+                    list.AddInReverseOrder(110);
+                    list.RemoveLast();
+                    list.ToDisplay();
+                    break;
+                case 5:
+                    list.AddInReverseOrder(90);
+                    list.AddInReverseOrder(100);
+                    list.AddInReverseOrder(110);
+                    list.Size();
+                    break;
+                case 6:
+                    LinkedlistD linkedlistD = new LinkedlistD();
+                    linkedlistD.LinkedlistMethod();
+                    break;
+                case 7:
+                    QueueExample queue = new QueueExample();
+                    queue.QueueMethod();
+                    queue.QueueGenerics();
+                    break;
+
+                default:
+                    Console.WriteLine("Element is invalid");
+                    break;
+            }
             Console.ReadLine();
         }
     }
