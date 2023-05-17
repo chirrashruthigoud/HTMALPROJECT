@@ -208,5 +208,150 @@ namespace HtmlProjectProgram
 
             Console.ReadKey();
         }
+        public  void Palindrome()
+        {
+
+            string string1, rev;
+            Console.WriteLine("Enter the String to check is Palindrome or not ");
+            string1 = Console.ReadLine();
+            string s1 = string1.ToLower();
+            char[] ch = s1.ToCharArray();
+            Array.Reverse(ch);
+            rev = new string(ch);
+            bool b = s1.Equals(rev, StringComparison.OrdinalIgnoreCase);
+            if (b == true)
+            {
+                Console.WriteLine("" + string1 + " is a Palindrome!");
+            }
+            else
+            {
+                Console.WriteLine(" " + string1 + " is not a Palindrome!");
+            }
+        }
+
+        public  void CheckReversenumber()
+        {
+            int n, reverse = 0, rem;
+            Console.WriteLine("Enter the Number : ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            while (n != 0)
+            {
+                rem = n % 10;
+                reverse = reverse * 10 + rem;
+                n = n / 10;
+            }
+            Console.WriteLine("Number Reversed " + reverse);
+
+        }
+
+        public  void Checkthecharacter()
+        {
+            char ch;
+            Console.WriteLine("Enter any Character");
+            ch = Convert.ToChar(Console.ReadLine());
+
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+                ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+            {
+                Console.WriteLine(ch + " is Vowel ");
+
+            }
+            else if (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z')
+            {
+
+                Console.WriteLine(ch + " is Constant ");
+            }
+            else
+            {
+                Console.WriteLine(" ");
+            }
+        }
+        public  void CheckPrimefactor()
+        {
+            Console.WriteLine("Enter a number to find its prime factor:");
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(N);
+
+            int i;
+            int a = 0;
+            for (i = 1; i <= N; i++)
+            {
+                if (N % i == 0)
+                {
+                    a++;
+                }
+
+            }
+            if (a == 2)
+            {
+                Console.WriteLine("Prime Number");
+                int fact = 1;
+                int factor;
+                for (i = 2; i <= N; i++)
+                {
+                    factor = fact * i; //fact = fact * i
+                    Console.Write(factor);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Not prime number");
+            }
+        }
+        public  void FindPerfectNumber()
+        {
+            int n, i, sum;
+            int mn, mx;
+            Console.WriteLine("Input the starting range or number");
+            mn = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input the starting range or number");
+            mx = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The perfect numbers within the given range : ");
+            for (n = mn; n < mx; n++)
+            {
+                i = 1;
+                sum = 0;
+                while (i < n)
+                {
+                    if (n % i == 0)
+
+                        sum = sum + i;
+                    i++;
+                }
+                if (sum == n)
+                {
+                    Console.WriteLine("{0}", n);
+                }
+            }
+        }
+        public void CheckPrimeNumber()
+        {
+            int a = 0, i, num;
+            Console.WriteLine("Enter your Number to Check Prime number or not");
+            num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(num);
+            for (i = 1; i <= num; i++)
+            {
+
+                if (num % i == 0)
+                {
+                    a++;
+
+                }
+            }
+            if (a == 2)
+            {
+                Console.WriteLine("Prime number");
+
+            }
+            else
+            {
+                Console.WriteLine("Not Prime number");
+            }
+        }
+
     }
+
 }

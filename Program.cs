@@ -10,7 +10,7 @@ namespace HtmlProjectProgram
     {
         public static void Main(string[] args)
         {
-            LinkedListNode list = new LinkedListNode();
+           /* LinkedListNode list = new LinkedListNode();
             Console.WriteLine("select the following");
             Console.WriteLine("1.Add element to linked list.\n2.Add element in reverse.\n3.Remove First Element\n4.Remove last element" +
                 "\n5.Size of LinkedList \n6.create linkedlist. \n7.Queue adding value. ");
@@ -63,7 +63,10 @@ namespace HtmlProjectProgram
                 default:
                     Console.WriteLine("Element is invalid");
                     break;
-            }
+            }*/
+
+            ArrayReverseHihellow obj= new ArrayReverseHihellow();
+            obj.Methodarray();
             Console.ReadLine();
         }
     }
