@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 namespace HtmlProjectProgram
 {
     public class LinkedlistD
-    {
+    {//linked list is the liner datastructure
+     //it consist of group of node in sequence
+     //node consist of two parts
+     //data and address
+     //data:-each node of a linked list can store a data.
+     //address:each node of a linkedlist can take a address of the next node(next)
+
         public void LinkedlistMethod()
         {
             LinkedList<int> linked = new LinkedList<int>();
